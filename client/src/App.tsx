@@ -38,14 +38,7 @@ function MainContainer({ children }: { children: React.ReactNode }) {
 	const location = useLocation();
 
 	// 중앙 정렬이 필요한 페이지들
-	const centerJustifyRoutes = [
-		"/login",
-		"/join",
-		"/checkPassword",
-		"/profileUpdate",
-		"/emailRegistration",
-		"/oauth",
-	];
+	const centerJustifyRoutes = ["/login","/join","/checkPassword","/profileUpdate","/emailRegistration","/oauth"];
 
 	if (location.pathname === "/") {
 		return <>{children}</>; // 메인 페이지에서는 children만 렌더링
