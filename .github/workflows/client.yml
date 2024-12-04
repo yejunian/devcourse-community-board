@@ -8,15 +8,12 @@ on:
             # develop은 나중에 원본 레포로 옮길 때 제거
         paths:
             - client/**/*
-        # 이것도 테스트해 보기
-        # types:
-        #     - opened
-        #     - reopened
-        #     # - edited
 
     push:
         branches:
             - main
+            # - develop
+            # develop은 나중에 원본 레포로 옮길 때 제거
         paths:
             - client/**/*
 
@@ -28,7 +25,6 @@ jobs:
     build:
         if: github.event_name == 'pull_request'
         runs-on: ubuntu-latest
-        # timeout-minutes: 10
 
         steps:
             - name: 코드 체크아웃
@@ -42,16 +38,10 @@ jobs:
             - name: 의존성 설치
               run: npm i
 
-            - name: Prettier 설정 파일 확인
-              run: cat .prettierrc.json
-
-            - name: Prettier 전체 포매팅 및 변화 확인
-              run: npm run format:write && git diff | cat
-
-            - name: 체크 - 클라이언트 코드 포맷
+            - name: 검사 - 클라이언트 코드 포맷
               run: npm run format:check -w client
 
-            - name: 체크 - 클라이언트 프로덕션 빌드 성공 여부
+            - name: 검사 - 클라이언트 프로덕션 빌드 성공 여부
               run: npm run build -w client
 
     deploy:
