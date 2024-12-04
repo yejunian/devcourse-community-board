@@ -42,6 +42,12 @@ jobs:
             - name: 의존성 설치
               run: npm i
 
+            - name: Prettier 설정 파일 확인
+              run: cat .prettierrc.json
+
+            - name: Prettier 전체 포매팅 및 변화 확인
+              run: npm run format:write && git diff | cat
+
             - name: 체크 - 클라이언트 코드 포맷
               run: npm run format:check -w client
 
