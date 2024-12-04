@@ -4,18 +4,18 @@
 
 ### 2. combine_text.js 파일 실행
 
--   badWords.json 내용 채워짐
+- badWords.json 내용 채워짐
 
 ### 3. regex_getter.js의 함수를 사용
 
--   getRegex
-    -   badWords.json 내용을 기반으로 비속어 필터링 정규표현식 생성
--   changeBadWords
-    -   정규표현식으로 텍스트를 검사하여 필터링된 부분을 수정함.
+- getRegex
+    - badWords.json 내용을 기반으로 비속어 필터링 정규표현식 생성
+- changeBadWords
+    - 정규표현식으로 텍스트를 검사하여 필터링된 부분을 수정함.
 
 ### 현재의 비속어 필터링 정규표현식
 
--   update : 2024.07.25
+- update : 2024.07.25
 
 ```js
 const regex =
