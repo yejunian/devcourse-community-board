@@ -1,0 +1,40 @@
+name: Pull Request 코드 검사
+
+on:
+    pull_request:
+        branches:
+            - main
+            - develop
+            # develop은 나중에 원본 레포로 옮길 때 제거
+        # paths:
+        #     - client/**/*
+
+defaults:
+    run:
+        shell: bash
+
+jobs:
+    pr-inspect:
+        # if: github.event_name == 'pull_request'
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: 변수 출력해 보기
+              run: echo "github.event_path = ${{github.event_path}}"
+
+            # - name: 코드 체크아웃
+            #   uses: actions/checkout@v4
+
+            # - name: Node 셋업
+            #   uses: actions/setup-node@v4
+            #   with:
+            #       node-version: "20"
+
+            # - name: 의존성 설치
+            #   run: npm i
+
+            # - name: 검사 - 클라이언트 코드 포맷
+            #   run: npm run format:check -w client
+
+            # - name: 검사 - 클라이언트 프로덕션 빌드 성공 여부
+            #   run: npm run build -w client
