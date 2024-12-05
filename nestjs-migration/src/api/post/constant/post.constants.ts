@@ -1,5 +1,5 @@
 export const POST_ERROR_MESSAGES = {
-	NOT_FOUND_POST: "존재하지 않는 게시글입니다.",
+	NOT_FOUND_POST: "게시글 조회 실패",
 	CREATE_POST_ERROR: "게시글 작성 실패",
 	UPDATE_POST_ERROR: "게시글 수정 실패",
 	DELETE_POST_ERROR: "게시글 삭제 실패",
