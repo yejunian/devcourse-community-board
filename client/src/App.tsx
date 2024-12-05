@@ -35,7 +35,7 @@ import useCategory from "./hook/useCategory";
 import Toast from "./component/common/Toast/Toast";
 
 function MainContainer({ children }: { children: React.ReactNode }) {
-	const location = useLocation();
+	const location;
 
 	// 중앙 정렬이 필요한 페이지들
 	const centerJustifyRoutes = [

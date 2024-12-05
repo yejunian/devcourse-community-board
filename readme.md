@@ -4,12 +4,12 @@
 
 ---
 
--   팀장 : [박상찬](https://github.com/HungKungE)
-    -   구현 : (게시글 + 댓글)
--   팀원 : [이예준](https://github.com/yejunian)
-    -   구현 : (게시글 + 댓글)
--   팀원 : [신재광](https://github.com/Siltarae)
-    -   구현 : (회원 가입 + 로그인)
+- 팀장 : [박상찬](https://github.com/HungKungE)
+    - 구현 : (게시글 + 댓글)
+- 팀원 : [이예준](https://github.com/yejunian)
+    - 구현 : (게시글 + 댓글)
+- 팀원 : [신재광](https://github.com/Siltarae)
+    - 구현 : (회원 가입 + 로그인)
 
 ### 2. 프로젝트 구조 ( 프로젝트 진행하면서 변경 예정 )
 
